@@ -1,0 +1,66 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | Animation
+// | Usage: @include animation(name 5s linear 2s infinite alternate);
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+
+// Executa todas as propriedades abaixo em single-line.
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+            animation: $animation;
+}
+
+// Define o nome da animação
+@mixin animation-name($name) {
+    -webkit-animation-name: $name;
+            animation-name: $name;
+}
+
+// Define a duração da animação, de 0% a 100%.
+@mixin animation-duration($duration: 1s) { // Tempo em ms ou s
+    -webkit-animation-duration: $duration;
+            animation-duration: $duration;
+}
+
+// Define como a animação vai progredir ao longo do ciclo.
+@mixin animation-timing-function($timing: linear) {  // ease, ease-in, ease-out, ease-in-out, linear, step-start, step-end, steps(4, end)
+    -webkit-animation-timing-function: $timing;
+            animation-timing-function: $timing;
+}
+
+// Define quando a animação deve começar.
+@mixin animation-delay($delay: 0s) { // Tempo em ms ou s
+    -webkit-animation-delay: $delay;
+            animation-delay: $delay;
+}
+
+// Quantidade de vezes que a animação será executada.
+@mixin animation-iteration-count($count: infinite) { // 0, 1, ..., infinite
+    -webkit-animation-iteration-count: $count;
+            animation-iteration-count: $count;
+}
+
+// Indica a direção e o sentido da animação.
+@mixin animation-direction($direction: alternate) { // normal, reverse, alternate, alternate-reverse
+    -webkit-animation-direction: $direction;
+            animation-direction: $direction;
+}
+
+// Especifica como uma animação deve aplicar estilos ao seu destino antes e depois que ele está sendo executado.
+@mixin animation-fill-mode($fill: forwards) { // none, forwards, backwards, both
+    -webkit-animation-fill-mode: $fill;
+            animation-fill-mode: $fill;
+}
+
+// Determina se uma animação está sendo executada ou pausada. 
+// Seu valor pode ser alterado, mudando o estato da animação,
+// quando ela estiver pausada e o estado for alterado para running
+// continuará de onde parou
+@mixin animation-play-state($state) { // paused, running
+    -webkit-animation-play-state: $state;   
+            animation-play-state: $state;
+}
+
+

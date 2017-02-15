@@ -1,0 +1,21 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | Placeholder
+// | Usage:
+// | @include placeholder {
+// | 	property: value;
+// | }
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+@mixin placeholder {
+    &:-ms-input-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        @content
+    }
+    &::-webkit-input-placeholder {
+        @content
+    }
+}

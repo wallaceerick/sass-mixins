@@ -1,0 +1,19 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | Font-Face
+// | Usage: @include font('Lato Bold', lato-bold, '7h48gd3bd', 300, italic);
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+@mixin font($name, $source, $hash, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $name;
+		src: font-url($source + '.eot');
+		src: font-url($source + '.eot?#iefix') format('embedded-opentype'),
+		     font-url($source + '.woff') format('woff'),
+		     font-url($source + '.ttf') format('truetype'),
+		     font-url($source + '.svg#' + $hash) format('svg');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}

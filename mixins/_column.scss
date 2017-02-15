@@ -1,0 +1,42 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | Columns
+// | Usage: @include columns(2 50%);
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+@mixin columns($args){
+    -webkit-columns: $args;
+       -moz-columns: $args;
+    		columns: $args;
+}
+
+@mixin column-count($count){
+    -webkit-column-count: $count;
+       -moz-column-count: $count;
+    		column-count: $count;
+}
+
+@mixin column-gap($gap){
+    -webkit-column-gap: $gap;
+       -moz-column-gap: $gap;
+    		column-gap: $gap;
+}
+
+@mixin column-rule($rule){
+    -webkit-column-rule: $rule;
+       -moz-column-rule: $rule;
+    		column-rule: $rule;
+}
+
+@mixin column-width($width){
+    -webkit-column-width: $width;
+       -moz-column-width: $width;
+    		column-width: $width;
+}
+
+@mixin column-fill($fill){
+    -webkit-column-fill: $fill;
+       -moz-column-fill: $fill;
+    		column-fill: $fill;
+}

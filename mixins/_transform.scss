@@ -1,0 +1,107 @@
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | CSS Transform
+// | Usage: @include transform(rotate(45));
+// | Usage: @include rotate(45);
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+		-ms-transform: $transforms;
+			transform: $transforms;
+}
+
+@mixin transform-origin($origin) {
+	-webkit-transform-origin: $origin;
+	   -moz-transform-origin: $origin;
+		-ms-transform-origin: $origin;
+			transform-origin: $origin;
+}
+
+@mixin transform-style($style) {
+	-webkit-transform-style: $style;
+	   -moz-transform-style: $style;
+		-ms-transform-style: $style;
+			transform-style: $style;
+}
+
+@mixin perspective($perspective) {
+	-webkit-perspective: $value + px; 
+	   -moz-perspective: $value + px; 
+		-ms-perspective: $value + px; 
+			perspective: $value + px;
+	@include transform(perspective($value + px));
+}
+
+@mixin perspective-origin($perspective-origin){
+	-webkit-perspective-origin: $perspective-origin;
+	   -moz-perspective-origin: $perspective-origin;
+  		-ms-perspective-origin: $perspective-origin;
+			perspective-origin: $perspective-origin;
+}
+
+
+// Rotate
+@mixin rotate($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+@mixin rotateX($deg) {
+	@include transform(rotateX(#{$deg}deg));
+}
+@mixin rotateY($deg) {
+	@include transform(rotateY(#{$deg}deg));
+}
+@mixin rotateZ($deg) {
+	@include transform(rotateZ(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) { 
+	@include transform(scale($scale));
+}
+@mixin scaleX($deg) {
+	@include transform(scaleX(#{$deg}deg));
+}
+@mixin scaleY($deg) {
+	@include transform(scaleY(#{$deg}deg));
+}
+@mixin scale3d($deg) {
+	@include transform(scale3d(#{$deg}deg));
+}
+
+// Translate
+@mixin translate($x, $y) {
+	@include transform(translate($x, $y));
+}
+@mixin translateX($deg) {
+	@include transform(translateX(#{$deg}deg));
+}
+@mixin translateY($deg) {
+	@include transform(translateY(#{$deg}deg));
+}
+@mixin translateZ($deg) {
+	@include transform(translateZ(#{$deg}deg));
+}
+@mixin translate3d($deg) {
+	@include transform(translate3d(#{$deg}deg));
+}
+
+// Skew
+@mixin skew($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+@mixin skewX($deg) {
+	@include transform(skewX(#{$deg}deg));
+}
+@mixin skewY($deg) {
+	@include transform(skewY(#{$deg}deg));
+}
+
+// Matrix
+@mixin matrix($values) {
+	@include transform(matrix($values));
+}
+@mixin matrix3d($values) {
+	@include transform(matrix3d($values));
+}
