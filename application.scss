@@ -7,5 +7,5 @@
 @import 'mixins/mixins';
 
 .box {
-	color: red;
+	@include appearance();
 }
